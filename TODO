@@ -1,0 +1,7 @@
+TODO
+
+1. Hacer el juego jugable
+2. Convertir las siguientes funciones:
+   2.1 draw_screen
+   2.2 main
+   2.3 enemy_ship
