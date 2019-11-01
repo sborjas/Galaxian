@@ -3,12 +3,10 @@
 
 #define TO_STR(ch) ( ( ((ch) >= 0 ) && ((ch) <= 9) )? (48 + (ch)) : ('a' + ((ch) - 10)) )
 
- 
-int main() {
+void enemy_ship();
+void enemy_ship_c();
 
-    clear_screen();
-
-    void draw_screen(){
+  void draw_screen(){
 
         
         //horizontal
@@ -171,23 +169,9 @@ int main() {
         put_char(4);
         set_color(f,b);
     }
-    
-    
-    keypad_init();
-    draw_screen();
 
-     
 
-    int movehor = 35;
-    
-
-    move_gun(24,movehor);
-    move_sship(25,movehor);
-    move_lwing(25,movehor-1);
-    move_rwing(25,movehor+1);
-
-    void enemy_ship(){
-    
+void enemy_ship_c(){
         int movehor_enemy = 25;
         for(int h=0; h<=5;h++){
             move_gun_enemy(10,movehor_enemy);
@@ -197,6 +181,24 @@ int main() {
             movehor_enemy +=5;
         }
     }
+
+    
+ 
+int main() {
+
+    clear_screen();
+    
+    keypad_init();
+    draw_screen();
+
+    int movehor = 35;
+    
+    move_gun(24,movehor);
+    move_sship(25,movehor);
+    move_lwing(25,movehor-1);
+    move_rwing(25,movehor+1);
+
+    
 
     
     enemy_ship();
